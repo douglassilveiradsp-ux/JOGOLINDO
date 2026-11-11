@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Douglas da Matemática</title>
+<style>
+:root{--azul:#1e5aa8;--amarelo:#ffc933;--verde:#2e9e5b;--fundo:#f4f8ff;--texto:#1c2430}
+*{box-sizing:border-box}
+body{margin:0;font-family:Verdana,Arial,sans-serif;background:var(--fundo);color:var(--texto)}
+header{background:var(--azul);color:#fff;text-align:center;padding:22px 12px}
+header h1{margin:0;font-size:2rem}
+header p{margin:6px 0 0;color:var(--amarelo)}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:14px;background:#dbe8fb}
+nav button{border:0;border-radius:8px;padding:12px 22px;font-size:1rem;font-weight:bold;cursor:pointer;background:#fff;color:var(--azul);box-shadow:0 2px 4px #0003}
+nav button.ativo{background:var(--amarelo);color:#222}
+main{max-width:960px;margin:auto;padding:16px}
+section{display:none}
+section.ativa{display:block}
+h2{color:var(--azul);border-bottom:3px solid var(--amarelo);padding-bottom:4px}
+.card{background:#fff;border-radius:12px;padding:16px;margin:14px 0;box-shadow:0 2px 6px #0002}
+.card h3{margin-top:0;color:var(--verde)}
+.card svg{display:block;max-width:100%;height:auto;margin:8px auto;background:#fcfdff;border:1px solid #cdd9ee;border-radius:8px}
+.ex{background:#fff8dc;border-left:5px solid var(--amarelo);padding:8px 12px;border-radius:6px}
+details{margin-top:6px}
+summary{cursor:pointer;color:var(--azul);font-weight:bold}
+footer{text-align:center;padding:18px;font-size:.9rem;background:var(--azul);color:#fff;margin-top:20px}
+</style>
+</head>
+<body>
+<header>
+  <h1>📐 Douglas da Matemática</h1>
+  <p>Aprender Matemática com desenhos e exemplos</p>
+</header>
+
+<nav>
+  <button class="ativo" onclick="aba('a6',this)">6º ano</button>
+  <button onclick="aba('a7',this)">7º ano</button>
+  <button onclick="aba('a8',this)">8º ano A</button>
+  <button onclick="aba('a9',this)">9º ano</button>
+</nav>
+
+<main>
+
+<!-- 6º ANO -->
+<section id="a6" class="ativa">
+  <h2>6º ano</h2>
+  <div class="card">
+    <h3>Frações</h3>
+    <p>Uma fração mostra partes de um todo. Na figura, a pizza foi dividida em 4 partes iguais e 3 estão pintadas: <b>3/4</b>.</p>
+    <svg viewBox="0 0 200 200" width="200" role="img" aria-label="Pizza 3/4">
+      <circle cx="100" cy="100" r="80" fill="#fff" stroke="#1e5aa8" stroke-width="3"/>
+      <path d="M100 100 L100 20 A80 80 0 1 1 20 100 Z" fill="#ffc933" stroke="#1e5aa8" stroke-width="3"/>
+      <line x1="100" y1="20" x2="100" y2="180" stroke="#1e5aa8" stroke-width="3"/>
+      <line x1="20" y1="100" x2="180" y2="100" stroke="#1e5aa8" stroke-width="3"/>
+    </svg>
+    <div class="ex">Exemplo: Bruno comprou 7 laranjas e 3 maçãs. As maçãs são <b>3/10</b> das frutas.</div>
+  </div>
+  <div class="card">
+    <h3>Reta numérica e medidas</h3>
+    <p>1 metro = 100 centímetros. Veja 0, 1 e 2 metros na reta.</p>
+    <svg viewBox="0 0 500 90" width="500">
+      <line x1="20" y1="45" x2="480" y2="45" stroke="#222" stroke-width="3"/>
+      <g stroke="#222" stroke-width="3"><line x1="40" y1="30" x2="40" y2="60"/><line x1="250" y1="30" x2="250" y2="60"/><line x1="460" y1="30" x2="460" y2="60"/></g>
+      <g font-size="16" text-anchor="middle" fill="#1e5aa8"><text x="40" y="80">0 m</text><text x="250" y="80">1 m (100 cm)</text><text x="460" y="80">2 m (200 cm)</text></g>
+    </svg>
+  </div>
+  <div class="card">
+    <h3>Área do retângulo</h3>
+    <svg viewBox="0 0 300 160" width="300">
+      <rect x="40" y="30" width="200" height="100" fill="#bfe3c9" stroke="#2e9e5b" stroke-width="3"/>
+      <text x="140" y="150" text-anchor="middle" font-size="16">base = 8 cm</text>
+      <text x="255" y="85" font-size="16">h = 4 cm</text>
+      <text x="140" y="85" text-anchor="middle" font-size="16" fill="#222">A = 8 × 4 = 32 cm²</text>
+    </svg>
+    <p><b>Área = base × altura.</b></p>
+  </div>
+</section>
+
+<!-- 7º ANO -->
+<section id="a7">
+  <h2>7º ano</h2>
+  <div class="card">
+    <h3>Plano cartesiano</h3>
+    <p>Cada ponto é escrito como par ordenado (x, y). Veja A(2, 3), B(-3, 1) e C(-2, -3).</p>
+    <svg viewBox="0 0 320 320" width="320">
+      <g stroke="#dde6f5"><line x1="20" y1="60" x2="300" y2="60"/><line x1="20" y1="110" x2="300" y2="110"/><line x1="20" y1="210" x2="300" y2="210"/><line x1="20" y1="260" x2="300" y2="260"/><line x1="60" y1="20" x2="60" y2="300"/><line x1="110" y1="20" x2="110" y2="300"/><line x1="210" y1="20" x2="210" y2="300"/><line x1="260" y1="20" x2="260" y2="300"/></g>
+      <g stroke="#222" stroke-width="2"><line x1="10" y1="160" x2="310" y2="160"/><line x1="160" y1="10" x2="160" y2="310"/></g>
+      <text x="300" y="150" font-size="14">x</text><text x="168" y="20" font-size="14">y</text>
+      <g fill="#d9342b"><circle cx="260" cy="10" r="0"/><circle cx="260" cy="60" r="6" transform="translate(-50 40)"/><circle cx="60" cy="110" r="6" transform="translate(0 0)"/><circle cx="110" cy="260" r="6"/></g>
+      <g font-size="14" fill="#1e5aa8" font-weight="bold"><text x="218" y="92">A(2,3)</text><text x="14" y="100">B(-3,1)</text><text x="118" y="262">C(-2,-3)</text></g>
+    </svg>
+  </div>
+  <div class="card">
+    <h3>Ângulos</h3>
+    <p>Reto = 90°, agudo &lt; 90°, obtuso &gt; 90°.</p>
+    <svg viewBox="0 0 480 140" width="480">
+      <g stroke="#1e5aa8" stroke-width="3" fill="none">
+        <path d="M20 120 H120 M20 120 L100 50"/><path d="M180 120 H280 M180 120 V30"/><path d="M340 120 H440 M340 120 L300 40"/>
+      </g>
+      <path d="M180 105 h15 v15" stroke="#d9342b" stroke-width="2" fill="none"/>
+      <g font-size="14" text-anchor="middle" fill="#222"><text x="70" y="138">agudo (50°)</text><text x="230" y="138">reto (90°)</text><text x="370" y="138">obtuso (120°)</text></g>
+    </svg>
+  </div>
+  <div class="card">
+    <h3>Porcentagem</h3>
+    <p>Um tênis de R$ 200 com 25% de desconto:</p>
+    <svg viewBox="0 0 420 70" width="420">
+      <rect x="10" y="15" width="400" height="36" fill="#fff" stroke="#1e5aa8" stroke-width="2"/>
+      <rect x="10" y="15" width="100" height="36" fill="#ffc933" stroke="#1e5aa8" stroke-width="2"/>
+      <text x="60" y="38" text-anchor="middle" font-size="14">25% = R$ 50</text>
+      <text x="260" y="38" text-anchor="middle" font-size="14">paga R$ 150</text>
+    </svg>
+    <div class="ex">25% de 200 = 200 × 0,25 = 50 → 200 − 50 = <b>R$ 150</b>.</div>
+  </div>
+</section>
+
+<!-- 8º ANO -->
+<section id="a8">
+  <h2>8º ano A</h2>
+  <div class="card">
+    <h3>Teorema de Pitágoras</h3>
+    <p>No triângulo retângulo: <b>a² = b² + c²</b> (a é a hipotenusa).</p>
+    <svg viewBox="0 0 300 220" width="300">
+      <polygon points="40,180 240,180 40,60" fill="#cfe2ff" stroke="#1e5aa8" stroke-width="3"/>
+      <path d="M40 165 h15 v15" stroke="#d9342b" stroke-width="2" fill="none"/>
+      <g font-size="16" fill="#222"><text x="130" y="205" text-anchor="middle">c = 4</text><text x="8" y="125">b = 3</text><text x="160" y="110">a = ?</text></g>
+    </svg>
+    <div class="ex">a² = 3² + 4² = 9 + 16 = 25 → <b>a = 5</b>.</div>
+  </div>
+  <div class="card">
+    <h3>Frações e equações</h3>
+    <p>Resolver 2x + 6 = 14 é como equilibrar uma balança:</p>
+    <svg viewBox="0 0 360 150" width="360">
+      <line x1="180" y1="40" x2="180" y2="130" stroke="#222" stroke-width="4"/>
+      <line x1="60" y1="40" x2="300" y2="40" stroke="#222" stroke-width="4"/>
+      <rect x="60" y="45" width="100" height="40" fill="#ffc933" stroke="#222"/><text x="110" y="71" text-anchor="middle" font-size="16">2x + 6</text>
+      <rect x="200" y="45" width="100" height="40" fill="#bfe3c9" stroke="#222"/><text x="250" y="71" text-anchor="middle" font-size="16">14</text>
+    </svg>
+    <div class="ex">2x = 14 − 6 = 8 → <b>x = 4</b>.</div>
+  </div>
+  <div class="card">
+    <h3>Áreas de figuras planas</h3>
+    <svg viewBox="0 0 480 140" width="480">
+      <g stroke="#2e9e5b" stroke-width="3" fill="#bfe3c9">
+        <polygon points="20,110 140,110 110,30 50,30"/><polygon points="200,70 250,20 300,70 250,120"/><polygon points="340,110 460,110 400,30"/>
+      </g>
+      <g font-size="13" text-anchor="middle" fill="#222"><text x="80" y="132">Trapézio: (B+b)·h/2</text><text x="250" y="138">Losango: D·d/2</text><text x="400" y="132">Triângulo: b·h/2</text></g>
+    </svg>
+  </div>
+</section>
+
+<!-- 9º ANO -->
+<section id="a9">
+  <h2>9º ano</h2>
+  <div class="card">
+    <h3>Função do 2º grau (parábola)</h3>
+    <p>Gráfico de y = x² − 4: abre para cima e corta o eixo x em −2 e 2.</p>
+    <svg viewBox="0 0 320 280" width="320">
+      <g stroke="#222" stroke-width="2"><line x1="10" y1="120" x2="310" y2="120"/><line x1="160" y1="10" x2="160" y2="270"/></g>
+      <path d="M100 10 Q160 270 220 10" fill="none" stroke="#d9342b" stroke-width="3" transform="translate(0 0)"/>
+      <g fill="#1e5aa8"><circle cx="120" cy="120" r="5"/><circle cx="200" cy="120" r="5"/><circle cx="160" cy="200" r="5"/></g>
+      <g font-size="13" fill="#222"><text x="95" y="112">(-2,0)</text><text x="205" y="112">(2,0)</text><text x="168" y="215">(0,-4)</text></g>
+    </svg>
+  </div>
+  <div class="card">
+    <h3>Círculo e circunferência</h3>
+    <svg viewBox="0 0 260 220" width="260">
+      <circle cx="130" cy="110" r="80" fill="#cfe2ff" stroke="#1e5aa8" stroke-width="3"/>
+      <line x1="130" y1="110" x2="210" y2="110" stroke="#d9342b" stroke-width="3"/>
+      <circle cx="130" cy="110" r="4" fill="#222"/>
+      <g font-size="14" fill="#222"><text x="165" y="104">r</text><text x="120" y="132">O</text></g>
+    </svg>
+    <p><b>C = 2·π·r</b> e <b>A = π·r²</b>.</p>
+    <div class="ex">Se r = 5 cm: A = 3,14 × 25 = <b>78,5 cm²</b>.</div>
+  </div>
+  <div class="card">
+    <h3>Semelhança e Teorema de Tales</h3>
+    <svg viewBox="0 0 340 190" width="340">
+      <polygon points="30,170 170,170 30,50" fill="#fff8dc" stroke="#1e5aa8" stroke-width="3"/>
+      <polygon points="30,170 310,170 30,-10" fill="none" stroke="#2e9e5b" stroke-width="3" stroke-dasharray="6 4"/>
+      <g font-size="13" fill="#222"><text x="85" y="186" text-anchor="middle">3</text><text x="240" y="186" text-anchor="middle">6</text></g>
+    </svg>
+    <p>Triângulos semelhantes têm lados proporcionais: se um tem lado 3 e o outro 6, a razão é <b>2</b>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Site criado por <b>Douglas</b> – Pesquisador de Jogos | Professor de Matemática (Linhares – ES)
+</footer>
+
+<script>
+function aba(id, btn){
+  document.querySelectorAll('section').forEach(s => s.classList.remove('ativa'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('ativo'));
+  document.getElementById(id).classList.add('ativa');
+  btn.classList.add('ativo');
+}
+</script>
+</body>
+</html>
